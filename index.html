@@ -7,15 +7,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="assets/contact.css">
+    <style>
+        .language-selector {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+
+.language-selector button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.language-selector button:hover {
+    background-color: #0056b3;
+}
+    </style>
 </head>
 <body>
+
+    <div class="language-selector">
+        <button onclick="changeLang('uz')">O'zbek</button>
+        <button onclick="changeLang('ru')">Русский</button>
+        <button onclick="changeLang('en')">English</button>
+    </div>
     <canvas id="particles" class="particles"></canvas>
     <div class="container">
         <section class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Professional Dasturchi</h1>
-                <h2 class="hero-subtitle">Zamonaviy Dasturiy Yechimlar</h2>
-                <p class="hero-description">
+                 <h1 class="hero-title" data-translate="heroTitle">Professional Dasturchi</h1>
+                <h2 class="hero-subtitle" data-translate="heroSubtitle">Zamonaviy Dasturiy Yechimlar</h2>
+                <p class="hero-description" data-translate="heroDescription">
                     Assalomu alaykum Mening ismim <span class="highlight">To'lqin</span> men professional web, mobil va desktop dasturchiman. 
                     Men sizning g'oyalaringizni zamonaviy va sifatli dasturiy mahsulotlarga aylantira olaman va 
                      har qanday murakkablikdagi loyihalarni amalga oshirib va mijozlar uchun eng yaxshi yechimlarni taqdim etaman.
@@ -233,5 +261,54 @@
     </div>
 
     <script src="assets/index.js"></script>
-</body>
+
+    <script>
+        const translations = {
+    'uz': {
+        'title': 'Professional Dasturchi Portfolio',
+        'heroTitle': 'Professional Dasturchi',
+        'heroSubtitle': 'Zamonaviy Dasturiy Yechimlar',
+        'heroDescription': 'Assalomu alaykum Mening ismim <span class="highlight">To\'lqin</span> men professional web, mobil va desktop dasturchiman. Men sizning g\'oyalaringizni zamonaviy va sifatli dasturiy mahsulotlarga aylantira olaman va har qanday murakkablikdagi loyihalarni amalga oshirib va mijozlar uchun eng yaxshi yechimlarni taqdim etaman.',
+        // Qolgan tarjimalarni shu yerga qo'shing
+    },
+    'ru': {
+        'title': 'Портфолио Профессионального Разработчика',
+        'heroTitle': 'Профессиональный Разработчик',
+        'heroSubtitle': 'Современные Программные Решения',
+        'heroDescription': 'Здравствуйте, меня зовут <span class="highlight">Тулкин</span>, я профессиональный веб, мобильный и десктопный разработчик. Я могу превратить ваши идеи в современные и качественные программные продукты и реализовать проекты любой сложности, предоставляя лучшие решения для клиентов.',
+        // Qolgan tarjimalarni shu yerga qo'shing
+    },
+    'en': {
+        'title': 'Professional Developer Portfolio',
+        'heroTitle': 'Professional Developer',
+        'heroSubtitle': 'Modern Software Solutions',
+        'heroDescription': 'Hello, my name is <span class="highlight">Tulkin</span> and I am a professional web, mobile, and desktop developer. I can turn your ideas into modern and high-quality software products and implement projects of any complexity, providing the best solutions for clients.',
+        // Qolgan tarjimalarni shu yerga qo'shing
+    }
+};
+
+
+let currentLang = localStorage.getItem('lang') || 'uz';
+
+function changeLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    translatePage();
+}
+
+function translatePage() {
+    document.querySelectorAll('[data-translate]').forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[currentLang][key]) {
+            element.innerHTML = translations[currentLang][key];
+        }
+    });
+    document.documentElement.lang = currentLang;
+}
+
+document.addEventListener('DOMContentLoaded', translatePage);
+    </script>
+    
+
+
 </html>
