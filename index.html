@@ -3,10 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Developer Portfolio</title>
+    <title>To'lqin Tohirov - Professional Developer Portfolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="To'lqin Tohirov - Professional web, mobil va desktop dasturchi. Zamonaviy dasturiy yechimlar va loyihalar uchun tajribali dasturchi.">
+    <meta name="keywords" content="dasturchi, web dasturchi, mobil dasturchi, desktop dasturchi, portfolio, To'lqin Tohirov, dasturlash, web sayt yaratish, IT xizmatlari">
+    <meta name="author" content="To'lqin Tohirov">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tohirovtulkin.uz/">
+    <meta property="og:title" content="To'lqin Tohirov - Professional Dasturchi Portfolio">
+    <meta property="og:description" content="Professional web, mobil va desktop dasturchi. Zamonaviy dasturiy yechimlar va loyihalar uchun tajribali dasturchi.">
+    <meta property="og:image" content="https://tohirovtulkin.uz/photo/profile.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tohirovtulkin.uz/">
+    <meta property="twitter:title" content="To'lqin Tohirov - Professional Dasturchi Portfolio">
+    <meta property="twitter:description" content="Professional web, mobil va desktop dasturchi. Zamonaviy dasturiy yechimlar va loyihalar uchun tajribali dasturchi.">
+    <meta property="twitter:image" content="https://tohirovtulkin.uz/photo/profile.jpg">
+    
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://tohirovtulkin.uz/">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="assets/index.css">
     <link rel="stylesheet" href="assets/contact.css">
+    <link rel="stylesheet" href="assets/projects.css">
     <style>
         .language-selector {
     position: fixed;
@@ -32,11 +57,11 @@
 </head>
 <body>
 
-    <div class="language-selector">
+    <!-- <div class="language-selector">
         <button onclick="changeLang('uz')">O'zbek</button>
         <button onclick="changeLang('ru')">Русский</button>
         <button onclick="changeLang('en')">English</button>
-    </div>
+    </div> -->
     <canvas id="particles" class="particles"></canvas>
     <div class="container">
         <section class="hero">
@@ -64,7 +89,7 @@
                     </div>
                     
                 </div>
-                <a href="projects.php" class="cta-button projects-button">Loyihalarni Ko'rish</a>
+                <a href="assets/rezyume/Tohirov_tulkin_rezyume.docx" class="cta-button projects-button">Rezyume</a>
             </div>
 
             <div class="services">
@@ -175,6 +200,111 @@
                 </div>
             </div>
 
+            <div class="projects-section">
+                <h2 class="section-title" data-translate="projectsSectionTitle">Mening Loyihalarim</h2>
+                <p class="section-description" data-translate="projectsSectionDescription">Bu erda men ishlab chiqqan ba'zi loyihalarni ko'rishingiz mumkin</p>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <img src="photo/aidocs.png" alt="Loyiha 1" class="project-image">
+                        <a href="https://aidocs.tohirovdev.uz" target="_blank" class="project-link"></a>
+                        <div class="project-content">
+                            <h3 class="project-title">Aidocs - hujjat yaratuvchi</h3>
+                            <p class="project-description">O'qituvchilar uchun o'qitish materiallari yaratuvchi sayt.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">tailwindcss</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <img src="photo/xcourse.png" alt="CRM Tizimi" class="project-image">
+                        <a href="https://xcourse.tohirovdev.uz" target="_blank" class="project-link"></a>
+                        <div class="project-content">
+                            <h3 class="project-title">CRM Tizimi</h3>
+                            <p class="project-description">O'quv markazlarini avtomatlashtirish CRM tizimi, moliyaviy hisobotlar, xodimlar va o'quvchilar nazorati bir tizimda.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <img src="photo/avtotestlar.png" alt="Avto Testlar" class="project-image">
+                        <a href="http://avtotestlar.uz/" target="_blank" class="project-link"></a>
+                        <div class="project-content">
+                            <h3 class="project-title">Avto Testlar</h3>
+                            <p class="project-description">haydovchilik guvohmasi olish imtihoni tayyorlanish uchun test, amaliy mashqlar va videodarslar tizimi.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">tailwindcss</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <img src="photo/steeltextbook.png" alt="Steel Textbook" class="project-image">
+                        <a href="https://webdeveloper94.github.io/Steeltextbook/" target="_blank" class="project-link"></a>
+                        <div class="project-content">
+                            <h3 class="project-title">Steel Textbook</h3>
+                            <p class="project-description">Fizikaning metallar bo'limini o'ragtuvchi virtual darslik. Maruza va laboratoriya mashqlari orqali mukammal o'rganish.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <img src="photo/optica.png" alt="Optica" class="project-image">
+                        <a href="https://webdeveloper94.github.io/optica" target="_blank" class="project-link"></a>
+                        <div class="project-content">
+                            <h3 class="project-title">Optica - fizika</h3>
+                            <p class="project-description">Fizikaning optika bo'limini o'ragtuvchi virtual darslik. Maruza, laboratoriya, nazariy savollar va test mashqlari orqali mukammal o'rganish.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 6 -->
+                    <div class="project-card">
+                        <img src="photo/at.png" alt="AT" class="project-image">
+                        <a href="https://at.tohirovdev.uz/" target="_blank" class="project-link"></a>
+                        <div class="project-content">
+                            <h3 class="project-title">Axborot texnologiyalari.</h3>
+                            <p class="project-description">Axborot texnologiyalari fani bo'yicha to'liq raqamli ta'lim resursi, maruza, videodarslar, testlar va mashqlar.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">TensorFlow</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="contact-cta">
                 <h2 class="contact-title">Loyihangizni Muhokama Qilishga Tayyormisiz?</h2>
                 <p class="contact-description">
@@ -256,7 +386,6 @@
 
             
 
-            <a href="projects.php" class="cta-button projects-button">Loyihalarni Ko'rish</a>
         </section>
     </div>
 
@@ -269,6 +398,8 @@
         'heroTitle': 'Professional Dasturchi',
         'heroSubtitle': 'Zamonaviy Dasturiy Yechimlar',
         'heroDescription': 'Assalomu alaykum Mening ismim <span class="highlight">To\'lqin</span> men professional web, mobil va desktop dasturchiman. Men sizning g\'oyalaringizni zamonaviy va sifatli dasturiy mahsulotlarga aylantira olaman va har qanday murakkablikdagi loyihalarni amalga oshirib va mijozlar uchun eng yaxshi yechimlarni taqdim etaman.',
+        'projectsSectionTitle': 'Mening Loyihalarim',
+        'projectsSectionDescription': 'Bu erda men ishlab chiqqan ba\'zi loyihalarni ko\'rishingiz mumkin',
         // Qolgan tarjimalarni shu yerga qo'shing
     },
     'ru': {
@@ -276,6 +407,8 @@
         'heroTitle': 'Профессиональный Разработчик',
         'heroSubtitle': 'Современные Программные Решения',
         'heroDescription': 'Здравствуйте, меня зовут <span class="highlight">Тулкин</span>, я профессиональный веб, мобильный и десктопный разработчик. Я могу превратить ваши идеи в современные и качественные программные продукты и реализовать проекты любой сложности, предоставляя лучшие решения для клиентов.',
+        'projectsSectionTitle': 'Мои Проекты',
+        'projectsSectionDescription': 'Здесь вы можете увидеть некоторые из проектов, которые я разработал',
         // Qolgan tarjimalarni shu yerga qo'shing
     },
     'en': {
@@ -283,6 +416,8 @@
         'heroTitle': 'Professional Developer',
         'heroSubtitle': 'Modern Software Solutions',
         'heroDescription': 'Hello, my name is <span class="highlight">Tulkin</span> and I am a professional web, mobile, and desktop developer. I can turn your ideas into modern and high-quality software products and implement projects of any complexity, providing the best solutions for clients.',
+        'projectsSectionTitle': 'My Projects',
+        'projectsSectionDescription': 'Here you can see some of the projects that I have developed',
         // Qolgan tarjimalarni shu yerga qo'shing
     }
 };
